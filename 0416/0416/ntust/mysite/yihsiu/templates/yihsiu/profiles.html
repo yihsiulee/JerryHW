@@ -1,0 +1,16 @@
+<h1>個人簡歷</h1>
+{% for m in myid %}
+<table class="table">
+	<tr>
+		<th>名字</th>
+			<td>{{ m.name }}</td>
+	</tr>
+	<tr>
+		<th>電話</th>
+			<td>{{ m.phone_number }}</td>
+	</tr>
+	<tr>
+		<th>地址</th>
+			<td>{{ m.adress}}</td>
+	</tr>
+	{% endfor %}
