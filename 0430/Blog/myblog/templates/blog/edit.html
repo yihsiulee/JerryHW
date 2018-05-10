@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>edit article</title>
+</head>
+<body>
+	<body style="background-color:#FFFF96">
+
+	<h1>修改文章</h1>
+	<form action = "" method='post'>
+		{% csrf_token %}
+
+	
+	<h2>修改標題</h2>
+		<!--也可以用<input type="text" name="xx"><br>換行-->
+		<textarea name="edittitle" >{{ post.title }}</textarea><br>
+
+	<h2>修改內容</h2>
+		<textarea name="edittext">{{ post.text}}</textarea><br>
+
+		<input type="submit" value="確認修改" >
+		<!--type是種類（按鈕）value是按鈕上的文字-->
+	
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>post new article</title>
+</head>
+<body>
+	<body style="background-color:#FFFF96">
+	<h1>post</h1>
+	<form action = "" method="post">
+		{% csrf_token %}
+<!--<form> 標籤所包圍的區域為表單區域
+	action 屬性指定傳送的目標頁面
+	method 屬性即是傳送的方式，又分為GET跟POST兩種
+GET  ：表單資料將以字串的方式附加在網址後面傳送
+POST ：表單資料將放置在HTTP標頭的方式傳送 
+-->
+
+		<h1>標題</h1>
+	<!--也可以用<input type="text" name="xx">
+		<br>換行
+	-->
+			<textarea name="title"></textarea><br>
+		<h1>內容</h1>
+			<textarea name="article"></textarea><br>
+
+			<input type="submit" value="posttt" >
+		<!--type是種類（按鈕）value是按鈕上的文字-->
+	</form>
+	<p><a href="/post_list">回到blog</a></p>
+<!--
+	<hr>
+	<h4>Content:</h4><br>
+	{{ q }}
+-->
+</body>
+</html>

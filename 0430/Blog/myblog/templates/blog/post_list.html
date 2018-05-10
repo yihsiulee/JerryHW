@@ -1,0 +1,20 @@
+
+<h1 style="color:#FF30FF;">ヾ(●゜▽゜●)♡我ヾ(●゜▽゜●)♡的ヾ(●゜▽゜●)♡部落格ヾ(●゜▽゜●)♡</h1>
+<body style="background-color:#FFFF96">
+<a href="/add"><button>新增文章</button></a>
+
+  	
+    {% for post in posts %}
+        <div>
+            <p>發布日期：published: {{ post.published_date }}</p>
+
+            <h2 style="color:#990DFF;">(　ﾟ∀ﾟ) ﾉ♡標題：{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            
+            <a href="/delete?a={{post.id}}"><button>刪除文章</button></a>
+            <a href="/edit?q={{ post.pk }}"><button>修改文章</button></a>
+        
+        </div>
+    {% endfor %}
+    
+    

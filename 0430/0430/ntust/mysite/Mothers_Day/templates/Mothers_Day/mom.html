@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<meta charset="utf-8">-->
+	<title>Mothers Day</title>
+</head>
+<body>
+
+	<h1>Mothers Dayy</h1>
+	<form action = "" method='post'>
+		{% csrf_token %}
+		<textarea name="q"></textarea> 
+		<input type="submit" value="posttt" >
+		<!--type是種類（按鈕）value是按鈕上的文字-->
+	</form><hr>
+	<h4>Content:</h4><br>
+	{{ q }}
+</body>
+</html>
